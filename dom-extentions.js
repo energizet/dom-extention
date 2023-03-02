@@ -20,6 +20,11 @@
 			case 'children':
 				child.addCustomElements(option);
 				break;
+			case 'style':
+				for (const optionKey in option) {
+					child[key][optionKey] = option[optionKey];
+				}
+				break;
 			default:
 				child[key] = option;
 				break;
